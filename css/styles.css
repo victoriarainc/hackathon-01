@@ -1,0 +1,29 @@
+
+body{
+  margin: 0 5%;
+  background: #333;
+}
+
+.headerLogo {
+  color: white;
+  text-align: right;
+}
+
+h2 {
+  font-family: 'Roboto Slab', serif;
+}
+
+#wrapper {
+  margin: 0 10%;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.gameBox {
+  background-color: white;
+  margin: 10px;
+  height:300px;
+  width: auto;
+  border: 3px solid black;
+  flex: 1 0 45%;
+}
