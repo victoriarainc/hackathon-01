@@ -1,30 +1,35 @@
 let userName = prompt("Who are you?");
-let firstQuestion = prompt("Ok, " + userName + ", where do you want to go? Choose one of Africa, S America, N America, or Europe.")
+let firstQuestion = prompt("Hi " + userName + "! I'm Stacey, I'll be your guide around the Iron Yard campus today. What would you like to see first? Choose one of Clocktower, Cupboard, Cloud City, or Kitchen.")
 
-if (firstQuestion === "Africa") {
-    let talent = prompt("OK, so we're headed to scout in Africa, eh? Let's hit up our club sponsored training camp in Ghana. We've identified three top talents there. One is an attacking midfielder from Accra; He's 16 and very fast, but very slight of frame for his age. The other target is a goalkeeper who is a giant already! He's 6'4 at only 17. Would you rather sign the AMF or the GK?");
-} else if (firstQuestion === "Europe") {
-    let talent = prompt("Europe, eh? OK, " + userName + ", we have a central training camp outside of Rome where we've identified two top talents: one is a central midfielder with very strong defensive awareness and the other is powerful and tall striker. Who should we sign: the CMF or the CF?")
-} else if (firstQuestion === "S America") {
-    let talent = prompt("OK, onto S America it is! We have a good relationship with a famous club in Santiago, Chile. They have two bright young talents, both defenders. The first is a centerback who is very physical but struggles with keeping his cool, while the other is a right-sided fullback with rubber-burning pace. Should we sign the CB or the RB?")
-} else if (firstQuestion === "N America") {
-    let talent = prompt("We don't have the most developed relationships in N America, but let's give it a try. From my scouting contacts in Chicago, I've heard about two talents: one is a left-sided fullback with very strong crossing but deficiencies in his defensive positioning and the other is a very special support-striker who is child of a former European superstar who moved to the US before retiring from football. Who should we bring back to our club: the LB or the SS?")
+if (firstQuestion === "Clocktower") {
+    let first = prompt("As we climb to the second story we can sneak a peek into the Clocktower here - one of our classrooms. Looks like Brandon here is brainstorming some pseudo code on our whiteboard wall! The room is also equipped with a projector screen for live demos and sometimes entertainment purposes. We've got a bright and beautiful mural on that back wall and, obviously, our homage to Back to the Future framed next to the screen. Where would you like to go next, Cupboard, Cloud City, or Kitchen?" );
+
+} else if (firstQuestion === "Cupboard") {
+    let first = prompt("Cupboard, eh? " + userName + ", it's okay I'm a Harry Potter fan too! And as you can see, we've got this cozy space under the stairs for students to use as a conference room. Jamie is over there in the corner coding away... Hey Jamie! Let's not bother him too much. We can still visit the Clocktower, Cloud City, or Kitchen.")
+
+} else if (firstQuestion === "Cloud City") {
+    let first = prompt("A little warm up here I know but the students here have a great working space here in Cloud City. A projecter and plenty of white board space to collaborate. And clearly if you're in here you should join the Dark Side. We have cookies. Just ask Victoria here! Oh you do have some cookies? Oh. They're gluten free. No thanks. Let's move on. Where to next? Clocktower, Cupboard, or Kitchen?")
+
+} else if (firstQuestion === "Kitchen") {
+    let first = prompt("Here we have the finest coffee in the land and a single microwave that works very hard to provide for all of our students. Our beautiful mural here starts everyone's day with local pride. Hashtag City of Oaks... As you can see Ben here likes to hold <b>the</b> most random conversations with any and all who enter our doors. Hey, Ben! No, I do not know why I can't be a dual citizen of Switzerland and the US but that sounds like a great conversation to have when I'm done with this tour! Let's move on. We can still see Clocktower, Cupboard, or Cloud City next. ")
 }
 
-if (talent === "AMF") {
-    let choice1 = prompt("Great choice, boss! We could use some more creativity up front. First order of business is determining whether we want to develop him in-house or send him out for a few years on loan. There are positives and drawbacks to either way, but it's ultimately up to you, Coach " + userName +". What do you say: loan or keep?");
-} else if (talent === "GK") {
-    let choice2 = prompt("I always say that you should build from the back, first and foremost! First order of business is determining whether we want to develop him in-house or send him out for a few years on loan. There are positives and drawbacks to either way, but it's ultimately up to you, Coach" + userName +". What'll it be: loan or keep?")
-} else if (talent === "CMF") {
-    let choice3 = prompt("A good central midfielder is the cog that makes everything tick! First order of business is determining whether we want to develop him in-house or send him out for a few years on loan. There are positives and drawbacks to either way, but it's ultimately up to you, Coach" + userName +". What do you say: loan or keep?")
-} else if (talent === "CF") {
-    let choice4 = prompt("A target-man! Bring on the firepower! First order of business is determining whether we want to develop him in-house or send him out for a few years on loan. There are positives and drawbacks to either way, but it's ultimately up to you, Mr. " + userName +". What'll it be: loan or keep?")
-} else if (talent === "CB") {
-    let choice5 = prompt("I agree, we need some steel and grit in the backline. First order of business is determining whether we want to develop him in-house or send him out for a few years on loan. There are positives and drawbacks to either way, but it's ultimately up to you, Coach " + userName +". What do you say: loan or keep?")
-} else if (talent === "RB") {
-    let choice6 = prompt("Width! Width! Width! - That's how the game is played today! First order of business is determining whether we want to develop him in-house or send him out for a few years on loan. There are positives and drawbacks to either way, but it's ultimately up to you, Coach " + userName +". What do you say: loan or keep?")
-} else if (talent === "LB") {
-    let choice7 = prompt("Width! Width! Width! - That's how the game is played today! First order of business is determining whether we want to develop him in-house or send him out for a few years on loan. There are positives and drawbacks to either way, but it's ultimately up to you, Coach " + userName +". What do you say: loan or keep?")
-} else if (talent === "SS") {
-    let choice8 = prompt("Assists and goals - this guy will do it all! First order of business is determining whether we want to develop him in-house or send him out for a few years on loan. There are positives and drawbacks to either way, but it's ultimately up to you, Coach " + userName +". What do you say: loan or keep?")
+if (first === "Clocktower") {
+    let second = prompt("As we climb to the second story we can sneak a peek into the Clocktower here - one of our classrooms. Looks like Brandon here is brainstorming some pseudo code on our whiteboard wall! The room is also equipped with a projector screen for live demos and sometimes entertainment purposes. We've got a bright and beautiful mural on that back wall and, obviously, our homage to Back to the Future framed next to the screen. Where would you like to go next, Cupboard, Cloud City, or Kitchen? ");
+} else if (first === "Cupboard") {
+    let second = prompt("Cupboard, eh? " + userName + ", it's okay I'm a Harry Potter fan too! And as you can see, we've got this cozy space under the stairs for students to use as a conference room. Jamie is over there in the corner coding away... Hey Jamie! Let's not bother him too much. We can still visit the Clocktower, Cloud City, or Kitchen. ")
+} else if (first === "Cloud City") {
+    let second = prompt("A little warm up here I know but the students here have a great working space here in Cloud City. A projecter and plenty of white board space to collaborate. And clearly if you're in here you should join the Dark Side. We have cookies. Just ask Victoria here! Oh you do have some cookies? Oh. They're gluten free. No thanks. Let's move on. Where to next? Clocktower, Cupboard, or Kitchen?")
+} else if (first === "Kitchen") {
+    let second = prompt("Here we have the finest coffee in the land and a single microwave that works very hard to provide for all of our students. Our beautiful mural here starts everyone's day with local pride. Hashtag City of Oaks... As you can see Ben here likes to hold <b>the</b> most random conversations with any and all who enter our doors. Hey, Ben! No, I do not know why I can't be a dual citizen of Switzerland and the US but that sounds like a great conversation to have when I'm done with this tour! Let's move on. We can still see Clocktower, Cupboard, or Cloud City next.")
+
+
+} else if (second === "Clocktower") {
+    let third = prompt("I agree, we need some steel and grit in the backline. First order of business is determining whether we want to develop him in-house or send him out for a few years on loan. There are positives and drawbacks to either way, but it's ultimately up to you, Coach " + userName +". What do you say: loan or keep?")
+} else if (second === "Cupboard") {
+    let third = prompt("Width! Width! Width! - That's how the game is played today! First order of business is determining whether we want to develop him in-house or send him out for a few years on loan. There are positives and drawbacks to either way, but it's ultimately up to you, Coach " + userName +". What do you say: loan or keep?")
+} else if (second === "Kitchen") {
+    let third = prompt("Width! Width! Width! - That's how the game is played today! First order of business is determining whether we want to develop him in-house or send him out for a few years on loan. There are positives and drawbacks to either way, but it's ultimately up to you, Coach " + userName +". What do you say: loan or keep?")
+} else if (second === "Cloud City") {
+    let third = prompt("Assists and goals - this guy will do it all! First order of business is determining whether we want to develop him in-house or send him out for a few years on loan. There are positives and drawbacks to either way, but it's ultimately up to you, Coach " + userName +". What do you say: loan or keep?")
 }
