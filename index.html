@@ -12,7 +12,7 @@
 <body>
   <header>
     <div class="headerLogo">
-      <h1>LOGO HERE</h1>
+      <h1>HACKATHON</h1>
     </div>
 
   </header>
@@ -23,10 +23,10 @@
 
 
       <!-- Word scramble start -->
-      <div id="scrambleBox" class="gameBox">
-        <h2>Scramble</h2>
-
-
+      <div id="scrambleBox" class="gameBox overlay overlayScramble">
+        <input id="scramInput" onClick="reset()" type="text" value="" placeholder="Type Word Here">
+        <button id="scramButton" onClick="scramble()" type="button" name="button">scramble</button>
+        <button id="resetButton" onClick="reset()" type="button" name="button">reset</button>
       </div>
       <!--  Word scramble end  -->
 
@@ -35,7 +35,9 @@
 
 
       <!--   Unsramble start  -->
-      <div id="unScrambleBox" class="gameBox">
+      <div id="unScrambleBox" class="gameBox overlay overlayUnScramble">
+
+
         <h2>Un-Scramble</h2>
 
 
@@ -47,7 +49,9 @@
 
 
       <!--    Canvas start     -->
-      <div id="canvasBox" class="gameBox">
+      <div id="canvasBox" class="gameBox overlay overlayCanvas">
+
+
         <h2>Canvas</h2>
 
 
@@ -62,7 +66,9 @@
 
 
       <!--          CYOA start         -->
-      <div id="cyoaBox" class="gameBox">
+      <div id="cyoaBox" class="gameBox overlay overlayCyoa">
+
+
         <h2>C.Y.O.A</h2>
 
 
@@ -74,7 +80,7 @@
   </main>
 
 
-  <script src="js/main.js " type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
 </body>
 
 </html>
