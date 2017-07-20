@@ -1,3 +1,5 @@
+cyoaBox.addEventListener('click', function onStart()
+
 
 // let dialog = {
 //   'Clock Tower': "As we climb to the second story we can sneak a peek into the Clocktower here - one of our classrooms. Looks like Brandon here is brainstorming some pseudo code on our whiteboard wall! The room is also equipped with a projector screen for live demos and sometimes entertainment purposes. We've got a bright and beautiful mural on that back wall and, obviously, our homage to Back to the Future framed next to the screen.",
@@ -75,7 +77,7 @@ let firstQuestion = alert("Hi " + userName + "! I'm Stacey, I'll be your guide a
         continue;
       }
 
-      // TODO: Display the room description the user selected (answer)
+      // TODO: Display the room description the user selected (answer) without alert
       alert(dialog[answer]);
 
   }
@@ -85,6 +87,7 @@ let firstQuestion = alert("Hi " + userName + "! I'm Stacey, I'll be your guide a
   let exit = alert("Well that's The Iron Yard! It was really nice meeting you " + userName + "! I hope you liked our campus - we'll see you next time!")
 
 }
+)
 
 // ===== Rough Draft ===== //
 
