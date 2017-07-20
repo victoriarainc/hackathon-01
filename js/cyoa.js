@@ -28,9 +28,9 @@ let firstQuestion = prompt("Hi " + userName + "! I'm Stacey, I'll be your guide 
 // ==== TOUR   ====
 // ================
 
-if (firstQuestion !=== true){
-  return error; 
-}
+// if (firstQuestion !== true){
+//   return error;
+// }
 
 if (firstQuestion === "Clocktower") {
   let first = prompt(`${clocktower} Where to next? Cupboard or Cloud City?`);
