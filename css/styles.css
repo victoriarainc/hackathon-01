@@ -19,6 +19,40 @@ h2 {
   flex-flow: wrap;
 }
 
+/*overlay for each div*/
+.overlay {
+  position: relative;
+}
+
+.overlay:before{
+  position: absolute;
+  content:"";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: inline;
+  z-index:0;
+}
+
+.overlay:hover:before{
+  display: none;
+}
+
+/*Starting overlay colors*/
+.overlayScramble:before{
+  background-color: rgba(255,0,0,0.5);
+}
+.overlayUnScramble:before{
+  background-color: rgba(0,255,0,0.5);
+}
+.overlayCanvas:before {
+  background-color: rgba(0,255,255,0.5);
+}
+.overlayCyoa:before {
+  background-color: rgba(0,0,255,0.5);
+}
+
 .gameBox {
   background-color: white;
   margin: 10px;
@@ -26,4 +60,44 @@ h2 {
   width: auto;
   border: 3px solid black;
   flex: 1 0 45%;
+}
+
+#scrambleBox {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+#scramButton {
+  font-family: 'Roboto Slab', serif;
+  margin: 40px auto;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+#resetButton {
+  font-family: 'Roboto Slab', serif;
+  margin: 40px auto;
+  width: 70px;
+  height: 30px;
+  display: none;
+  border-radius: 5px;
+}
+
+#scramInput {
+  margin:60px 35px;
+  font-size: 2em;
+  border: none;
+  border-bottom: 2px solid rgba(250,250,250,1);
+  text-align: center;
+}
+
+#scramOutput {
+  margin:60px 35px;
+  font-size: 2em;
+  border: none;
+  border-bottom: 2px solid rgba(250,250,250,1);
+  text-align: center;
 }
