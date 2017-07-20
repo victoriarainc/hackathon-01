@@ -1,5 +1,5 @@
-var canvas = document.getElementById("canvasInAPerfectWorld")
-var context = document.getElementById('canvasInAPerfectWorld').getContext("2d");
+var canvas = document.getElementById("canvasBox");
+var context = document.getElementById('canvasBox').getContext("2d");
 
 canvas.addEventListener("mousedown" ,function(e){
   var mouseX = e.pageX - this.offsetLeft;
@@ -35,6 +35,9 @@ function addClick(x, y, dragging)
   clickX.push(x);
   clickY.push(y);
   clickDrag.push(dragging);
+
+  console.log(clickX);
+  console.log(clickY);
 }
 
 function redraw(){
