@@ -1,13 +1,10 @@
-cyoaBox.addEventListener('click', function onStart()
-
-
 // let dialog = {
 //   'Clock Tower': "As we climb to the second story we can sneak a peek into the Clocktower here - one of our classrooms. Looks like Brandon here is brainstorming some pseudo code on our whiteboard wall! The room is also equipped with a projector screen for live demos and sometimes entertainment purposes. We've got a bright and beautiful mural on that back wall and, obviously, our homage to Back to the Future framed next to the screen.",
 //   'Cloud City': "A little warm up here I know but the students here have a great working space here in Cloud City. A projecter and plenty of white board space to collaborate. And clearly if you're in here you should join the Dark Side. We have cookies. Just ask Victoria here! Oh you do have some cookies? Oh. They're gluten free. No thanks.",
 //   'Cupboard': "Cupboard, eh? " + userName + ", it's okay I'm a Harry Potter fan too! And as you can see, we've got this cozy space under the stairs for students to use as a conference room. Jamie is over there in the corner coding away... Hey Jamie! Let's not bother him too much."
 // }
 
-let error = "I'm sorry, I didn't catch that."
+let error = "I'm sorry, I didn't catch that.";
 
 let promptStrings = [
   'Where to next?',
@@ -53,23 +50,31 @@ function promptForRoom() {
 }
 
 // This will start the minigame
-function onStart() {
-let userName = prompt("Who are you?");
-let firstQuestion = alert("Hi " + userName + "! I'm Stacey, I'll be your guide around the Iron Yard campus today.")
+cyoaBox.addEventListener('onclick', function cyoa() {
 
-  // Clears visited rooms, makes this replayable
-  visitedRooms = [];
-  let dialog = {
-      'Clock Tower': "As we climb to the second story we can sneak a peek into the Clocktower here - one of our classrooms. Looks like Brandon here is brainstorming some pseudo code on our whiteboard wall! The room is also equipped with a projector screen for live demos and sometimes entertainment purposes. We've got a bright and beautiful mural on that back wall and, obviously, our homage to Back to the Future framed next to the screen.",
-      'Cloud City': "A little warm up here I know but the students here have a great working space here in Cloud City. A projecter and plenty of white board space to collaborate. And clearly if you're in here you should join the Dark Side. We have cookies. Just ask Victoria here! Oh you do have some cookies? Oh. They're gluten free. No thanks.",
-      'Cupboard': "Cupboard, eh? I'm a Harry Potter fan too! And as you can see, we've got this cozy space under the stairs for students to use as a conference room. Jamie is over there in the corner coding away... Hey Jamie! Let's not bother him too much.",
-      'Lab': "Now that our class sizes have grown and we've integrated our program to include both front-end and back-end development for every student the Lab here has been the main hub of our location. At the end of the day students typically have lab time but they are not restricted to this area for it. Ben and Grant here seem to be working on their daily project so we'll just move right along. In the back of the room, as you can see, is a somewhat intimidating staircase that leads right up to our second story!",
-      'Kitchen': "The heart of our campus is really the kitchen here. Just look around! A beautiful mural to start the day off right, a real, vintage coffee pot, and even a hard-working microwave for all to share!"
+function cyoa() {
+
+      let cyoaBox = document.querySelector('#cyoaBox');
+
+      let userName = prompt("Who are you?");
+      let firstQuestion = alert("Hi " + userName + "! I'm Stacey, I'll be your guide around the Iron Yard campus today.")
+
+      // Clears visited rooms, makes this replayable
+      visitedRooms = [];
+      let dialog = {
+        'Clock Tower': "As we climb to the second story we can sneak a peek into the Clocktower here - one of our classrooms. Looks like Brandon here is brainstorming some pseudo code on our whiteboard wall! The room is also equipped with a projector screen for live demos and sometimes entertainment purposes. We've got a bright and beautiful mural on that back wall and, obviously, our homage to Back to the Future framed next to the screen.",
+        'Cloud City': "A little warm up here I know but the students here have a great working space here in Cloud City. A projecter and plenty of white board space to collaborate. And clearly if you're in here you should join the Dark Side. We have cookies. Just ask Victoria here! Oh you do have some cookies? Oh. They're gluten free. No thanks.",
+        'Cupboard': "Cupboard, eh? I'm a Harry Potter fan too! And as you can see, we've got this cozy space under the stairs for students to use as a conference room. Jamie is over there in the corner coding away... Hey Jamie! Let's not bother him too much.",
+        'Lab': "Now that our class sizes have grown and we've integrated our program to include both front-end and back-end development for every student the Lab here has been the main hub of our location. At the end of the day students typically have lab time but they are not restricted to this area for it. Ben and Grant here seem to be working on their daily project so we'll just move right along. In the back of the room, as you can see, is a somewhat intimidating staircase that leads right up to our second story!",
+        'Kitchen': "The heart of our campus is really the kitchen here. Just look around! A beautiful mural to start the day off right, a real, vintage coffee pot, and even a hard-working microwave for all to share!"
+
+        // cyoaBox.innerHTML = '';
+      }
     }
 
-  // TODO: Print greeting message (without any room prompt)
+    // TODO: Print greeting message (without any room prompt)
 
-  while (visitedRooms.length < rooms.length) {
+    while (visitedRooms.length < rooms.length) {
       let answer = promptForRoom();
 
       // If our answer is null, that means we ran into an error.  Continue the loop.
@@ -80,14 +85,15 @@ let firstQuestion = alert("Hi " + userName + "! I'm Stacey, I'll be your guide a
       // TODO: Display the room description the user selected (answer) without alert
       alert(dialog[answer]);
 
+    }
+
+    // Print the fairwell message
+
+    let exit = alert("Well that's The Iron Yard! It was really nice meeting you " + userName + "! I hope you liked our campus - we'll see you next time!")
+
   }
-
-  // Print the fairwell message
-
-  let exit = alert("Well that's The Iron Yard! It was really nice meeting you " + userName + "! I hope you liked our campus - we'll see you next time!")
-
-}
 )
+
 
 // ===== Rough Draft ===== //
 
