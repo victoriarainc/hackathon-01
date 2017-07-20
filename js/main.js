@@ -1,4 +1,5 @@
 let score = 0;
+let loseCounter = 3;
 
 function unscrambleGame() {
 
@@ -24,6 +25,7 @@ function unscrambleGame() {
           console.log(scrambledWord);
           unScrambleBox.innerHTML = `
             <h3>Score: ${score}</h3>
+            <h3 id="attemptsRemaining">Attempts remaining:  ${loseCounter};
             <h3>${scrambledWord}</h3>
             <input type="text" name="" value="" id="unscrambleInput"><button type="button" name="button" id="unscrambleButton">Ok</button>
             `;
@@ -31,14 +33,21 @@ function unscrambleGame() {
 
         .then(function() {
           document.querySelector('#unscrambleButton').addEventListener('click', function() {
-            if (document.querySelector('#unscrambleInput').value === word) {
+            if (document.querySelector('#unscrambleInput').value.toLowerCase() === word) {
               score++
               unScrambleBox.innerHTML = `
                 <h1>Great Job!</h1>
                 <button onclick="unscrambleGame()" id="startButton">Next</button>
                 `
+            } else if (loseCounter === 1) {
+              unScrambleBox.innerHTML = `
+                <h1>Game Over</h1>
+                `
             } else {
+              loseCounter--;
+              document.querySelector('#attemptsRemaining').innerHTML = `Attempts remaining: ${loseCounter}`;
               console.log('Try again');
+              console.log(loseCounter);
             }
           })
         })
