@@ -15,6 +15,8 @@ let cupboard = "Cupboard, eh? " + userName + ", it's okay I'm a Harry Potter fan
 
 let exit = "Well that's The Iron Yard. It was really nice meeting you " + userName + "! I hope you liked our campus - we'll see you next time!"
 
+let error = "I'm sorry, I didn't catch that."
+
 
 // =================
 // ===== FIRST =====
@@ -25,6 +27,10 @@ let firstQuestion = prompt("Hi " + userName + "! I'm Stacey, I'll be your guide 
 // ================
 // ==== TOUR   ====
 // ================
+
+if (firstQuestion !=== true){
+  return error; 
+}
 
 if (firstQuestion === "Clocktower") {
   let first = prompt(`${clocktower} Where to next? Cupboard or Cloud City?`);
