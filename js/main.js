@@ -29,6 +29,7 @@ function scramble() {
 // SCRAMBLE BOX FUNCIONALITY ******END*******//
 
 
+
 // UN-SCRAMBLE BOX FUNCIONALITY ******START*******//
 
 let score = 0;
@@ -99,13 +100,16 @@ function unscrambleGame() {
         })
     })
 }
+// UN-SCRAMBLE BOX FUNCIONALITY ******END*******//
+
+
 
 
 // COLOR RANDOMIZER FUNCTIONALITY ********START*****
 
 let background = document.getElementById("colorBox");
 
-let hex = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"]
+let hex = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
 
 background.addEventListener("click", function(){
 let newHex = ["#"]
@@ -113,16 +117,25 @@ let newHex = ["#"]
     let num = Math.floor(Math.random() * 16);
     newHex.push(hex[num]);
 }
-let concat = newHex.join("");
-console.log(concat);
+let newColor = newHex.join("");
+console.log(newColor);
 
-background.style.backgroundColor = concat;
+background.style.backgroundColor = newColor;
+document.querySelector("#colRanPrint").innerHTML = newColor;
+
+if (newColor.charAt(1) === "A" || newColor.charAt(1) === "B" || newColor.charAt(1) === "C" || newColor.charAt(1) === "D") {
+  document.querySelector("#trogPop").innerHTML =`
+  <img id="trog" onClick="removeImg()"src="images/trogdor.png">
+  `
+  }
 })
 
+function removeImg(){
+  document.querySelector("#trog").style.display = "none";
+}
+
+
 // Color Randomizer  *******************END********
-// UN-SCRAMBLE BOX FUNCIONALITY ******END*******//
-
-
 
 
 
