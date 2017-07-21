@@ -1,5 +1,4 @@
-
-body{
+body {
   margin: 0 5%;
   background: #333;
 }
@@ -19,7 +18,10 @@ h2 {
   flex-flow: wrap;
 }
 
+
 /*overlay for each div*/
+
+
 .overlay {
   position: relative;
 }
@@ -33,6 +35,7 @@ h2 {
   height:100%;
   display: inline;
   z-index:0;
+  border-radius: 10px;
 }
 
 .overlay:hover:before{
@@ -40,6 +43,8 @@ h2 {
 }
 
 /*Starting overlay colors*/
+
+
 .overlayScramble:before{
   background-color: rgba(255,0,0,0.5);
 }
@@ -54,13 +59,18 @@ h2 {
 }
 
 .gameBox {
+  border-radius: 15px;
+  min-width: 400px;
   background-color: white;
   margin: 10px;
-  height:300px;
+  height: 400px;
   width: auto;
   border: 3px solid black;
   flex: 1 0 45%;
 }
+
+
+/*ScrambleBox specific styles************/
 
 #scrambleBox {
   display: flex;
@@ -72,32 +82,145 @@ h2 {
 #scramButton {
   font-family: 'Roboto Slab', serif;
   margin: 40px auto;
-  width: 70px;
+  width: 100px;
   height: 30px;
   border-radius: 5px;
+  font-size: 1em;
 }
 
-#resetButton {
+#resetScramble {
+  font-family: 'Roboto Slab', serif;
+  margin: 40px auto;
+  width: 100px;
+  height: 30px;
+  display: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+#scramInput {
+  width: 50%;
+  margin: 90px auto;
+  font-size: 2em;
+  border: none;
+  border-bottom: 2px solid rgba(250, 250, 250, 1);
+  text-align: center;
+  outline: none;
+}
+
+#scramOutput {
+  width: 50%;
+  margin: 90px auto;
+  font-size: 2em;
+  border: none;
+  border-bottom: 2px solid rgba(250, 250, 250, 1);
+  text-align: center;
+}
+
+
+/*UNSCRAMBLE BOX STYLES****************/
+
+#unScrambleBox {
+  font-family: 'Roboto Slab', serif;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+#unScrambleBox h2 {
+  margin-top: 60px;
+  width: 100%;
+  text-align: center;
+}
+
+#startButton {
+  font-family: 'Roboto Slab', serif;
+  margin: 40px auto;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+#unscrambleInput {
+  margin: 40px 35px;
+  font-size: 2em;
+  text-align: center;
+  outline: none;
+}
+
+#score {
+  padding-left: 20px;
+  align-self: flex-start;
+  float: left;
+}
+
+#resetUnScramble {
   font-family: 'Roboto Slab', serif;
   margin: 40px auto;
   width: 70px;
   height: 30px;
-  display: none;
   border-radius: 5px;
+  font-size: 1em;
 }
 
-#scramInput {
-  margin:60px 35px;
-  font-size: 2em;
-  border: none;
-  border-bottom: 2px solid rgba(250,250,250,1);
-  text-align: center;
+#scoreboard {
+  width: 100%;
+  margin: 0 auto;
 }
 
-#scramOutput {
-  margin:60px 35px;
-  font-size: 2em;
-  border: none;
-  border-bottom: 2px solid rgba(250,250,250,1);
-  text-align: center;
+#scoreboard h3 {
+  padding: 0 40px;
+}
+
+#attemptsRemaining {
+  float: right;
+}
+
+#scramWord {
+  margin-top: 40px;
+}
+
+#unscrambleButton {
+  font-family: 'Roboto Slab', serif;
+  margin: 0px auto;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+#gOver {
+  margin-top: 120px;
+}
+
+#gJob {
+  margin-top: 120px;
+}
+
+/*CYOA BOX STYLES****************/
+
+#cyoaBox {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  position: relative;
+  padding: 10%;
+  font-size: 1em;
+  min-height: 400px;
+  height: auto;
+}
+
+button {
+  font-family: 'Roboto Slab', serif;
+  margin: 40px auto;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.cyoaP {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1em;
 }
