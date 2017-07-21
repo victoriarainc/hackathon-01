@@ -109,11 +109,28 @@ function unscrambleGame() {
 
 // COLOR GAME FUNCIONALITY ******START*******//
 
-function colorGameReset(){
-  compColorChoice = '';
-  playerSelect = '';
+function colorGameReset() {
+  compColorChoice = "";
+  playerSelect = "";
+  document.querySelector("#colorGame").innerHTML=`
+  <div id="colorNameContainer">
+    <p id="colorNameSpace"></p>
+      <button id="colorGameStart" onClick="colorGame()" type="button" name="button">Start</button>
+  </div>
+
+  <div id="colorButtonContainer">
+    <button id="redButton" class="guessButton" type="button" name="button" value="RED"></button>
+    <button id="purpleButton" class="guessButton" type="button" name="button" value="PURPLE"></button>
+    <button id="blueButton" class="guessButton" type="button" name="button" value="BLUE"></button>
+    <button id="greenButton" class="guessButton" type="button" name="button" value="GREEN"></button>
+    <button id="yellowButton" class="guessButton" type="button" name="button" value="YELLOW"></button>
+    <button id="orangeButton" class="guessButton" type="button" name="button" value="ORANGE"></button>
+  </div>`
   colorGame();
 }
+
+let playerSelect = "";
+let compColorChoice = "";
 
 function colorGame() {
 
@@ -130,7 +147,7 @@ function colorGame() {
 
   // Set color name:
 
-  let compColorChoice = colorNames[Math.floor(Math.random() * colorNames.length)];
+  compColorChoice = colorNames[Math.floor(Math.random() * colorNames.length)];
 
   document.querySelector("#colorNameSpace").innerHTML = `<p id="colorNamesColor">${compColorChoice}</p>`;
 
@@ -140,7 +157,7 @@ function colorGame() {
 
   // Set click eventListeners to all buttons to assign value upon click
 
-  let playerSelect = document.querySelectorAll(".guessButton");
+  playerSelect = document.querySelectorAll(".guessButton");
 
   for (var i = 0; i < playerSelect.length; i++) {
     playerSelect[i].addEventListener("click", function() {
@@ -148,20 +165,14 @@ function colorGame() {
       if (playerSelect === compColorChoice) {
         colorGameReset();
       } else {
-        document.querySelector("#colorNameContainer").innerHTML =
-        `
+        playerSelect = "";
+        compColorChoice = "";
+        document.querySelector("#colorNameContainer").innerHTML = `
         <p id="colorGameOver">Game Over</p>
-        <button id="colorGameReset" onClick="colorGameReset()" type="button" name="button">Reset</button>
-        `
+        <button id="colorGameReset" onClick="colorGameReset()" type="button" name="button">Try Again?</button>`
       }
     })
   }
-
-
-// if (playerSelect === ) {
-//
-// }
-
 }
 
 // COLOR GAME FUNCIONALITY ******END*******//
