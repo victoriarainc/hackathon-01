@@ -197,3 +197,30 @@ h2 {
 #gJob {
   margin-top: 120px;
 }
+
+/*CYOA BOX STYLES****************/
+
+#cyoaBox {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  position: relative;
+  padding: 10%;
+  font-size: 1em;
+  min-height: 400px;
+  height: auto;
+}
+
+button {
+  font-family: 'Roboto Slab', serif;
+  margin: 40px auto;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.cyoaP {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1em;
+}
