@@ -42,11 +42,22 @@
       </div>
       <!--   Unscramble end   -->
 
-
       <!-- **************************** -->
-      <div id = 'colorBox' class="gameBox overlay overlayColorGame">
-        <h2>Color Randomizer</h2>
+
+      <!--   Color Randomizer Start    -->
+
+      <div id ="colorBox" class="gameBox overlay overlayColorGame">
+        <h2 id="colRanTitle">Color Randomizer</h2>
+        <p id="colRanDir">Click to randomize</p>
+        <div id="trogPop">
+
+        </div>
+        <p id="colRanPrint"></p>
       </div>
+
+      <!--   Color Randomizer End    -->
+
+
 
       <!--    ColorGame start     -->
       <div id="colorGame" class="gameBox overlay overlayColorGame">
@@ -62,7 +73,9 @@
           <button id="greenButton" class="guessButton" type="button" name="button" value="GREEN"></button>
           <button id="yellowButton" class="guessButton" type="button" name="button" value="YELLOW"></button>
           <button id="orangeButton" class="guessButton" type="button" name="button" value="ORANGE"></button>
+
         </div>
+        <p id="colorGameDir">Click the button with a color that matches the color name</p>
       </div>
       <!--         ColorGame end         -->
 
