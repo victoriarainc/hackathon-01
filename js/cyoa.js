@@ -21,6 +21,9 @@ let rooms = ['Clock Tower', 'Cupboard', 'Cloud City', 'Lab', 'Kitchen'];
 let name = "";
 let visitedRooms = [];
 
+// We fetch the cyoaBox element a lot, lets just fetch it once
+let cyoaBox = document.getElementById('cyoaBox')
+
 document.getElementById('beginButton').addEventListener('click', displayNamePrompt);
 
 function displayNamePrompt() {
@@ -33,7 +36,7 @@ function displayNamePrompt() {
   <input id="nameInput" placeholder="Name"></input>
   <button id="nameButton">Submit</button>
   `
-  document.getElementById('cyoaBox').innerHTML = template;
+  cyoaBox.innerHTML = template;
   document.getElementById('nameButton').addEventListener('click', saveName);
 }
 
@@ -47,7 +50,7 @@ function displayGreeting() {
   <p>Hi ${name}! I'm Stacey, I'll be your guide around the Iron Yard campus today.</p>
   <p>Where would you like to go first?</p>
   `
-  document.getElementById('cyoaBox').innerHTML = template;
+  cyoaBox.innerHTML = template;
   displayRoomPrompt();
 }
 
@@ -58,7 +61,7 @@ function displayRoomPrompt() {
   <input id="roomInput"></input>
   <button id="roomButton">Submit</button>
   `
-  document.getElementById('cyoaBox').innerHTML += template;
+  cyoaBox.innerHTML += template;
   document.getElementById('roomButton').addEventListener('click', displayNextRoom);
 }
 
@@ -69,7 +72,7 @@ function displayNextRoom() {
   console.log(selected_room);
 
   if (availableRooms().indexOf(selected_room) === -1) {
-    document.getElementById('cyoaBox').innerHTML += `<p>${error}</p>`;
+    cyoaBox.innerHTML += `<p>${error}</p>`;
     document.getElementById('roomButton').addEventListener('click', displayNextRoom);
     return;
   }
@@ -80,14 +83,14 @@ function displayNextRoom() {
   let template = `
   <p>${dialog[selected_room]}</p>
   `
-  document.getElementById('cyoaBox').innerHTML = template;
+  cyoaBox.innerHTML = template;
 
   if (availableRooms().length > 0) {
     let prompt_string = promptStrings[Math.floor(Math.random() * promptStrings.length)];
     template = `
     <p>${prompt_string}</p>
     `
-    document.getElementById('cyoaBox').innerHTML += template;
+    cyoaBox.innerHTML += template;
     displayRoomPrompt();
 
   } else {
@@ -96,7 +99,7 @@ function displayNextRoom() {
       <p>Well that's The Iron Yard! It was really nice meeting you ${name}! I hope you liked our campus - we'll see you next time!</p>
       <button id="resetCYOAButton">Restart</button>
       `
-      document.getElementById('cyoaBox').innerHTML += template;
+      cyoaBox.innerHTML += template;
       document.getElementById('resetCYOAButton').addEventListener('click', displayNamePrompt);
   }
 }
