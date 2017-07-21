@@ -99,7 +99,6 @@ function unscrambleGame() {
         })
     })
 }
-<<<<<<< HEAD
 // UN-SCRAMBLE BOX FUNCIONALITY ******END*******//
 
 
@@ -177,7 +176,11 @@ function colorGame() {
 }
 
 // COLOR GAME FUNCIONALITY ******END*******//
-=======
+
+
+
+
+
 
 // CYOA ******START*******//
 
@@ -381,4 +384,3 @@ function availableRooms() {
 //       }
 //     }
 // CYOA ******END*******//
->>>>>>> 715376da3f24b82ed3b0f04c1d1461bc8964bbb7
