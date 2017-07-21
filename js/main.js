@@ -121,7 +121,7 @@ console.log(newColor);
 background.style.backgroundColor = newColor;
 document.querySelector("#colRanPrint").innerHTML = newColor;
 
-if (newColor.charAt(1) === "A" || newColor.charAt(1) === "B" || newColor.charAt(1) === "C" || newColor.charAt(1) === "D") {
+if (newColor.charAt(1) === "A" || newColor.charAt(1) === "B") {
   document.querySelector("#trogPop").innerHTML =`
   <img id="trog" onClick="removeImg()"src="images/trogdor.png">
   `
