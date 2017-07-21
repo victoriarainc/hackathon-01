@@ -216,7 +216,7 @@ let dialog = {
 let promptStrings = [
   'Where to next?',
   'Where would you like to go?',
-  'Lets check out a room!',
+  'Lets check out another room!',
   'What would you like to see?'
 ]
 let error = "I'm sorry, I didn't catch that.";
@@ -263,7 +263,7 @@ function displayGreeting() {
 function displayRoomPrompt() {
   let room_string = availableRooms().join(', ');
   let template = `
-  <p class="cyoaP">${room_string}</p>
+  <p class="cyoaP" id="cyoaRoomsAvail">${room_string}</p>
   <input id="roomInput"></input>
   <button id="roomButton">Submit</button>
   `
@@ -278,7 +278,7 @@ function displayNextRoom() {
   console.log(selected_room);
 
   if (availableRooms().indexOf(selected_room) === -1) {
-    cyoaBox.innerHTML += `<p>${error}</p>`;
+    cyoaBox.innerHTML += `<p id="cyoaError">${error}</p>`;
     document.getElementById('roomButton').addEventListener('click', displayNextRoom);
     return;
   }
