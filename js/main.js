@@ -28,6 +28,9 @@ function scramble() {
 
 // SCRAMBLE BOX FUNCIONALITY ******END*******//
 
+
+// UN-SCRAMBLE BOX FUNCIONALITY ******START*******//
+
 let score = 0;
 let loseCounter = 3;
 
@@ -96,7 +99,21 @@ function unscrambleGame() {
         })
     })
 }
+// UN-SCRAMBLE BOX FUNCIONALITY ******END*******//
 
+
+
+
+
+
+
+// COLOR GAME FUNCIONALITY ******START*******//
+
+function colorGameReset(){
+  compColorChoice = '';
+  playerSelect = '';
+  colorGame();
+}
 
 function colorGame() {
 
@@ -104,32 +121,47 @@ function colorGame() {
 
   // Declare arrays with color names and color values
 
-  let colorNames = ["Red", "Purple", "Blue", "Green", "Yellow", "Orange"];
+  let colorNames = ["RED", "PURPLE", "BLUE", "GREEN", "YELLOW", "ORANGE"];
   let colorValues = ["#dc0404", "#9f04dc", "#0409dc", "#04dc0d", "#f3e63d", "#f3a33d"];
 
-// Set background color:
+  // Set background color:
 
   document.querySelector("#colorNameContainer").style.backgroundColor = colorValues[Math.floor(Math.random() * colorNames.length)];
 
-// Set color name:
+  // Set color name:
 
-  let compColorChoice = colorNames[Math.floor(Math.random()*colorNames.length)];
+  let compColorChoice = colorNames[Math.floor(Math.random() * colorNames.length)];
 
   document.querySelector("#colorNameSpace").innerHTML = `<p id="colorNamesColor">${compColorChoice}</p>`;
 
-// Set 'color name' text color:
+  // Set 'color name' text color:
 
-  document.querySelector("#colorNamesColor").style.color = colorValues[Math.floor(Math.random()*colorNames.length)];
+  document.querySelector("#colorNamesColor").style.color = colorValues[Math.floor(Math.random() * colorNames.length)];
 
-let playerSelect = document.querySelectorAll(".guessButton").value;
+  // Set click eventListeners to all buttons to assign value upon click
 
-  document.querySelectorAll(".guessButton").addEventListener("click",function(){
+  let playerSelect = document.querySelectorAll(".guessButton");
 
-    console.log(playerSelect);
-  })
+  for (var i = 0; i < playerSelect.length; i++) {
+    playerSelect[i].addEventListener("click", function() {
+      playerSelect = this.value;
+      if (playerSelect === compColorChoice) {
+        colorGameReset();
+      } else {
+        document.querySelector("#colorNameContainer").innerHTML =
+        `
+        <p id="colorGameOver">Game Over</p>
+        <button id="colorGameReset" onClick="colorGameReset()" type="button" name="button">Reset</button>
+        `
+      }
+    })
+  }
+
 
 // if (playerSelect === ) {
 //
 // }
 
 }
+
+// COLOR GAME FUNCIONALITY ******END*******//

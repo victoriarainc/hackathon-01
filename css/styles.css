@@ -209,6 +209,9 @@ h2 {
 }
 
 #colorNameContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
   height: 150px;
   width: 250px;
   border-radius: 360px;
@@ -216,6 +219,7 @@ h2 {
   border: 1px solid black;
   margin: 0 auto;
 }
+
 
 #colorButtonContainer {
     display: flex;
@@ -242,14 +246,14 @@ h2 {
   height: 30px;
   font-size: 1em;
   outline: none;
-  position: relative;
-  top: 32px;
-  left: 90px;
 }
 
 #colorNamesColor {
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
+  -webkit-text-stroke: 2px white;
+  font-family: helvetica, arial, sans-serif;
+  font-weight: 700;
 }
 
 #redButton{
@@ -269,4 +273,21 @@ h2 {
 }
 #orangeButton {
   background-color: #f3a33d;
+}
+
+#colorGameOver {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-size: 2em;
+  color: white;
+  margin-top: 30px;
+}
+
+#colorGameReset {
+  font-family: 'Roboto Slab', serif;
+  margin: 0px auto;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 1em;
 }
