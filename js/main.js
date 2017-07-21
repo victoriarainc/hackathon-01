@@ -72,7 +72,7 @@ function unscrambleGame() {
             <h3 id="attemptsRemaining">Attempts remaining: ${loseCounter}</h3>
             </div>
             <h3 id="scramWord">${scrambledWord}</h3>
-            <input type="text" name="" value="" id="unscrambleInput"><button type="button" name="button" id="unscrambleButton">submit</button>
+            <input type="text" name="" value="" id="unscrambleInput"><button type="button" name="button" id="unscrambleButton">Submit</button>
             `;
         })
 
@@ -87,7 +87,7 @@ function unscrambleGame() {
             } else if (loseCounter === 1) {
               unScrambleBox.innerHTML = `
                 <h1 id="gOver">Game Over</h1>
-                <button id="resetUnScramble" onClick="resetUnscramble()" type="button" name="button">reset</button>
+                <button id="resetUnScramble" onClick="resetUnscramble()" type="button" name="button">Reset</button>
                 `
             } else {
               loseCounter--;
