@@ -63,9 +63,7 @@ function unscrambleGame() {
         })
 
         .then(function() {
-          scrambledWord = word.split('').sort(function() {
-            return 0.9 - Math.random()
-          }).join('');
+          scrambledWord = word.split('').sort(function() {return 0.9 - Math.random()}).join('');
           console.log(scrambledWord);
           unScrambleBox.innerHTML = `
             <div id="scoreboard">
