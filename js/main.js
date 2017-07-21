@@ -112,7 +112,7 @@ function unscrambleGame() {
 function colorGameReset() {
   compColorChoice = "";
   playerSelect = "";
-  document.querySelector("#colorGame").innerHTML=`
+  document.querySelector("#colorGame").innerHTML = `
   <div id="colorNameContainer">
     <p id="colorNameSpace"></p>
       <button id="colorGameStart" onClick="colorGame()" type="button" name="button">Start</button>
