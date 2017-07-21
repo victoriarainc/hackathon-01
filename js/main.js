@@ -96,3 +96,40 @@ function unscrambleGame() {
         })
     })
 }
+
+
+function colorGame() {
+
+  document.querySelector("#colorGameStart").style.display = "none";
+
+  // Declare arrays with color names and color values
+
+  let colorNames = ["Red", "Purple", "Blue", "Green", "Yellow", "Orange"];
+  let colorValues = ["#dc0404", "#9f04dc", "#0409dc", "#04dc0d", "#f3e63d", "#f3a33d"];
+
+// Set background color:
+
+  document.querySelector("#colorNameContainer").style.backgroundColor = colorValues[Math.floor(Math.random() * colorNames.length)];
+
+// Set color name:
+
+  let compColorChoice = colorNames[Math.floor(Math.random()*colorNames.length)];
+
+  document.querySelector("#colorNameSpace").innerHTML = `<p id="colorNamesColor">${compColorChoice}</p>`;
+
+// Set 'color name' text color:
+
+  document.querySelector("#colorNamesColor").style.color = colorValues[Math.floor(Math.random()*colorNames.length)];
+
+let playerSelect = document.querySelectorAll(".guessButton").value;
+
+  document.querySelectorAll(".guessButton").addEventListener("click",function(){
+
+    console.log(playerSelect);
+  })
+
+// if (playerSelect === ) {
+//
+// }
+
+}

@@ -21,7 +21,7 @@ h2 {
 
 /*overlay for each div*/
 
-
+/*
 .overlay {
   position: relative;
 }
@@ -45,18 +45,18 @@ h2 {
 /*Starting overlay colors*/
 
 
-.overlayScramble:before{
+/*.overlayScramble:before{
   background-color: rgba(255,0,0,0.5);
 }
 .overlayUnScramble:before{
   background-color: rgba(0,255,0,0.5);
 }
-.overlayCanvas:before {
+.overlayColorGame:before {
   background-color: rgba(0,255,255,0.5);
 }
 .overlayCyoa:before {
   background-color: rgba(0,0,255,0.5);
-}
+}*/
 
 .gameBox {
   border-radius: 15px;
@@ -196,4 +196,77 @@ h2 {
 
 #gJob {
   margin-top: 120px;
+}
+/**UNSCRAMBLE BOX STYLES******END*********/
+
+
+/*Color Game Styles*/
+
+#colorGame {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
+#colorNameContainer {
+  height: 150px;
+  width: 250px;
+  border-radius: 360px;
+  background-color: white;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+#colorButtonContainer {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    margin: 20px 50px 0px 50px;
+}
+
+.guessButton {
+  background-color: white;
+  border-radius: 15px;
+  height: 50px;
+  flex:1 0 30%;
+  outline: none;
+}
+
+
+#colorGameStart{
+  background-color: white;
+  border-radius: 15px;
+  font-family: 'Roboto Slab', serif;
+  margin: 10px auto 0px auto;
+  width: 70px;
+  height: 30px;
+  font-size: 1em;
+  outline: none;
+  position: relative;
+  top: 32px;
+  left: 90px;
+}
+
+#colorNamesColor {
+  font-size: 2em;
+  text-align: center;
+}
+
+#redButton{
+  background-color: #dc0404;
+}
+#purpleButton {
+  background-color: #9f04dc;
+}
+#blueButton {
+  background-color: #0409dc
+}
+#greenButton {
+  background-color: #04dc0d;
+}
+#yellowButton {
+  background-color: #f3e63d;
+}
+#orangeButton {
+  background-color: #f3a33d;
 }
